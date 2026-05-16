@@ -29,7 +29,13 @@
       --radius: 14px;
       --radius-sm: 8px;
     }
-
+<script>
+  setInterval(function() {
+    window.parent.postMessage({
+      frameHeight: document.body.scrollHeight
+    }, '*');
+  }, 500);
+</script>
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--bg);
